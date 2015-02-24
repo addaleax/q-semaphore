@@ -1,5 +1,13 @@
 q-semaphore
 ============
+
+[![NPM Version](https://img.shields.io/npm/v/q-semaphore.svg?style=flat)](https://npmjs.org/package/q-semaphore)
+[![NPM Downloads](https://img.shields.io/npm/dm/q-semaphore.svg?style=flat)](https://npmjs.org/package/q-semaphore)
+[![Build Status](https://travis-ci.org/addaleax/q-semaphore.svg?style=flat&branch=master)](https://travis-ci.org/addaleax/q-semaphore?branch=master)
+[![Coverage Status](https://coveralls.io/repos/addaleax/q-semaphore/badge.svg?branch=master)](https://coveralls.io/r/addaleax/q-semaphore?branch=master)
+[![Dependency Status](https://david-dm.org/addaleax/q-semaphore.svg?style=flat)](https://david-dm.org/addaleax/q-semaphore)
+[![devDependency Status](https://david-dm.org/addaleax/q-semaphore/dev-status.svg?style=flat)](https://david-dm.org/addaleax/q-semaphore#info=devDependencies)
+
 Semaphore implementation for Q promises on Node.js
 
 Install:
