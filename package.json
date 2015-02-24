@@ -5,7 +5,7 @@
 	"engine": "node >= 0.6.0",
 	"main": "./lib/semaphore.js",
 	"dependencies": {
-		"q": "^1.2.0"
+		"q": "~1.2.0"
 	},
 	"devDependencies": {
 		"mocha": "*",
