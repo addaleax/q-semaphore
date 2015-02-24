@@ -1,29 +1,28 @@
-semaphore.js
+q-semaphore
 ============
+Semaphore implementation for Q promises on Node.js
 
 Install:
-npm install semaphore
+`npm install q-semaphore`
 
 Limit simultaneous access to a resource.
 
 ```javascript
 // Create
-var sem = require('semaphore')(capacity);
+var sem = require('q-semaphore')(capacity);
 
 // Take
-sem.take(fn[, n=1])
-sem.take(n, fn)
+sem.take([n=1]) // returns a promise
 
 // Leave
-sem.leave([n])
+sem.leave([n=1])
 ```
-
 
 ```javascript
 // Limit concurrent db access
 var sem = require('semaphore')(1);
 var server = require('http').createServer(req, res) {
-	sem.take(function() {
+	sem.take().then(function() {
 		expensive_database_operation(function(err, res) {
 			sem.leave();
 
@@ -41,7 +40,7 @@ var sem = require('semaphore')(2);
 var server = require('http').createServer(req, res) {
 	res.write("Then good day, madam!");
 
-	sem.take(function() {
+	sem.take().then(function() {
 		res.end("We hope to see you soon for tea.");
 		sem.leave();
 	});
@@ -52,11 +51,11 @@ var server = require('http').createServer(req, res) {
 // Rate limit
 var sem = require('semaphore')(10);
 var server = require('http').createServer(req, res) {
-	sem.take(function() {
+	sem.take().then(function() {
 		res.end(".");
 		
-		setTimeout(sem.leave, 500)
-	});
+		return Q.delay(500);
+	}).then(sem.leave);
 });
 ```
 
@@ -64,3 +63,5 @@ License
 ===
 
 MIT
+
+This is based on the [abrkn/semaphore.js](https://github.com/abrkn/semaphore.js) implementation.

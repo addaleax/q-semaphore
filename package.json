@@ -1,18 +1,32 @@
 {
-    "name": "semaphore",
-    "version": "1.0.1",
-    "description": "semaphore for node",
-    "engine": "node >= 0.6.0",
-      "main": "./lib/semaphore.js",
-    "dependencies": {
-    },
-	"devDependencies": {
-        "mocha": "1.0.x",
-        "should": "0.6.x"
+	"name": "q-semaphore",
+	"version": "1.0.2",
+	"description": "semaphore implementation for Q",
+	"engine": "node >= 0.6.0",
+	"main": "./lib/semaphore.js",
+	"dependencies": {
+		"q": "^1.2.0"
 	},
-    "homepage": "https://github.com/abrkn/semaphore.js",
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:abrkn/semaphore.js.git" 
-    }
+	"devDependencies": {
+		"mocha": "*",
+		"istanbul": "*",
+		"coveralls": "*"
+	},
+	"homepage": "https://github.com/addaleax/q-semaphore",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:addaleax/q-semaphore.git" 
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/addaleax/q-semaphore/raw/master/LICENSE"
+		}
+	],
+	"scripts": {
+		"test": "mocha test"
+	},
+	"bugs": {
+		"url": "https://github.com/addaleax/q-semaphore/issues"
+	}
 }
