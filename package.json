@@ -2,7 +2,7 @@
 	"name": "q-semaphore",
 	"version": "1.0.3",
 	"author": {
-		"name": "Hauke Henningsen",
+		"name": "Anna Henningsen",
 		"email": "sqrt@entless.org"
 	},
 	"description": "semaphore implementation for Q",
